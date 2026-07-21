@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Relojes — mammoli.ar</title>
+<meta name="description" content="Reloj UTC, relojes mundiales, alarmas, timers y cronómetros en tarjetas reposicionables.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕐</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <h1>🕐 Relojes</h1>
+  <div class="toolbar">
+    <button type="button" class="btn btn-toolbar" id="add-clock">+ Reloj</button>
+    <button type="button" class="btn btn-toolbar" id="add-alarm">+ Alarma</button>
+    <button type="button" class="btn btn-toolbar" id="add-timer">+ Timer</button>
+    <button type="button" class="btn btn-toolbar" id="add-stopwatch">+ Cronómetro</button>
+  </div>
+</header>
+
+<main id="board" class="board"></main>
+
+<p id="empty-state" class="empty-state" hidden>
+  No hay tarjetas todavía. Agregá un reloj, una alarma, un timer o un cronómetro con los botones de arriba.
+</p>
+
+<dialog id="clock-dialog" class="clock-dialog">
+  <h2>Agregar reloj mundial</h2>
+  <input type="search" id="tz-search" placeholder="Buscar ciudad o país..." autocomplete="off">
+  <ul id="tz-list" class="tz-list"></ul>
+  <div class="tz-custom-row">
+    <input type="text" id="tz-custom" placeholder="Zona horaria IANA personalizada (ej: Asia/Tokyo)">
+    <button type="button" id="tz-custom-add" class="btn btn-primary">Agregar</button>
+  </div>
+  <div class="dialog-actions">
+    <button type="button" id="clock-dialog-cancel" class="btn btn-ghost">Cancelar</button>
+  </div>
+</dialog>
+
+<dialog id="rename-dialog" class="clock-dialog rename-dialog">
+  <h2>Nombre de la tarjeta</h2>
+  <input type="text" id="rename-input" placeholder="Ej: Fideos, Reunión, Vuelta al mundo...">
+  <div class="dialog-actions">
+    <button type="button" id="rename-cancel" class="btn btn-ghost">Cancelar</button>
+    <button type="button" id="rename-save" class="btn btn-primary">Guardar</button>
+  </div>
+</dialog>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
