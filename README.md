@@ -1,5 +1,7 @@
 # Relojes
 
+[![Archivado en Software Heritage](https://archive.softwareheritage.org/badge/origin/https://github.com/camammoli/relojes/)](https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/camammoli/relojes)
+
 Dashboard de tarjetas reposicionables: reloj UTC, relojes mundiales, alarmas, timers y cronómetro. Sin cuenta, sin servidor, sin build.
 
 **🌐 [mammoli.ar/relojes](https://mammoli.ar/relojes/)**
